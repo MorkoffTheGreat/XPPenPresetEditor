@@ -24,7 +24,8 @@ jobs:
     - name: Build solution
       run: msbuild XPPenPresetEditor.sln -t:rebuild -property:Configuration=Release
 
-    - uses: actions/upload-artifact@v4
+    - name: Upload artifact
+      uses: actions/upload-artifact@v4
       with:   
         # A file, directory or wildcard pattern that describes what to upload
         # Required.
@@ -41,6 +42,4 @@ jobs:
         # Does not fail if the artifact does not exist.
         # Optional. Default is 'false'
         overwrite: true
-
-    - uses: actions/download-artifact@v4
           
