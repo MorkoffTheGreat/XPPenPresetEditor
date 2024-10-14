@@ -21,8 +21,5 @@ jobs:
     - name: setup-msbuild
       uses: microsoft/setup-msbuild@v1.1
     
-    - name: Restore Packages
-      run: nuget restore MySolution.sln
-    
     - name: Build solution
       run: msbuild XPPenPresetEditor.sln -t:rebuild -property:Configuration=Release
